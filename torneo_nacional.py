@@ -21,7 +21,7 @@ def suma_puntos(row):
         puntajes[indice_local] += 1
         puntajes[indice_visita] += 1
 
-n_iter = 1000
+n_iter = 10000
 puntajes_guardados = []
 posiciones_guardadas = []
 for i in range(n_iter):
@@ -35,7 +35,7 @@ for i in range(n_iter):
     posiciones_guardadas.append(posiciones)
 
 puntajes_guardados_df = pd.DataFrame(puntajes_guardados, columns = equipos)
- 
+
 puntajes_guardados_df[puntajes_guardados_df.columns[::-1]].boxplot(vert=False).get_figure().savefig('boxplot_puntajes.png', bbox_inches = "tight")
 plt.clf()
 
