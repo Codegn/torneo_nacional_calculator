@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
-df = pd.read_csv('probs.csv', sep = ';', encoding = 'latin-1')
+df = pd.read_csv('probs.csv', sep = ',', encoding = 'latin-1')
 
 df_equipos = pd.read_csv('tabla_equipos_actual.csv', sep = ';', encoding = 'latin-1')
 equipos = list(df_equipos['EQUIPO'])
